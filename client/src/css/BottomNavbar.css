@@ -1,0 +1,25 @@
+.bottom-navbar {
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-navbar a {
+  background-color: aliceblue;
+  padding: 5px;
+  color: #333;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  border-radius: 3px;
+}
+
+.bottom-navbar a:hover {
+  background-color: #73f19d; /* Subtle blue accent */
+  transform: translateY(-2px);
+}

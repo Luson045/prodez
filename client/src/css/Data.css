@@ -1,0 +1,92 @@
+/* Styles for ChartComponent */
+.chart-container {
+  max-width: 700px; /* Reduced the max-width for a smaller appearance */
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  color: #2d6a4f;
+  margin-bottom: 20px;
+}
+
+.chart-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.chart {
+  width: 40%; /* Reduced the width for smaller charts */
+}
+
+.pie-chart {
+  height: 250px; /* Reduced the height for a smaller pie chart */
+}
+
+.bar-chart {
+  height: 250px; /* Reduced the height for a smaller bar chart */
+  width: 350px;  /* Reduced the width for a smaller bar chart */
+}
+
+.numbers-section {
+  margin-top: 20px;
+}
+
+h3 {
+  color: #2d6a4f;
+  margin-bottom: 10px;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.number-item {
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  width: 28%; /* Adjusted width to match the smaller charts */
+  text-align: center;
+}
+
+.number-item h4 {
+  color: #2d6a4f;
+}
+
+.number-item p {
+  font-size: 24px;
+  color: #52b788;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .chart-section {
+    flex-direction: column;
+  }
+
+  .chart {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .numbers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .number-item {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+}

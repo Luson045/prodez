@@ -1,0 +1,126 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  padding: 20px;
+  overflow-x: hidden;  /* Add this to prevent horizontal scrollbar */
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.hero a{
+  text-decoration: none;
+  background-color: #01b54c;
+  color:rgb(247, 241, 241);
+  padding:15px;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: #1a5f1a;
+}
+
+.hero p {
+  font-size: 3rem;
+  max-width: 600px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 50px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px 0;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.card.left {
+  align-self: flex-start;
+  margin-left: 10%;
+  transform: translateX(-100%);
+}
+
+.card.right {
+  align-self: flex-end;
+  margin-right: 10%;
+  transform: translateX(100%);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card h2 {
+  color: #1a5f1a;
+  margin-bottom: 10px;
+  font-size: 3rem;
+}
+
+.card p {
+  color: #333;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .hero a{
+    padding:10px;
+    font-size: 1.2rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .card {
+    width: 250px;
+    height: 250px;
+    align-self: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .card.left, .card.right {
+    transform: translateX(-100%);
+  }
+
+  .card.visible {
+    transform: translateX(0);
+  }
+  .card h2 {
+    color: #1a5f1a;
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+}

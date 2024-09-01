@@ -1,0 +1,9 @@
+.todo-container {
+  width: 90px;
+  max-width: 800px; /* Increased max-width for desktop view */
+  margin: 40px auto; /* Centered on the screen */
+  padding: 30px; /* Increased padding for a more spacious look */
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
