@@ -11,7 +11,7 @@ const app = express();
 const port = 5000; 
 
 const corsOptions = {
-  origin: ['https://learnstocks.netlify.app','https://console.cron-job.org/','http://prodez-ai.netlify.app'], // Replace with your frontend's URL
+  origin: ['https://learnstocks.netlify.app','https://console.cron-job.org/','https://prodez-ai.netlify.app'], // Replace with your frontend's URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'],
   credentials: true,
