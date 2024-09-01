@@ -18,7 +18,7 @@ const ProcessedTodoList = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   useEffect(() => {
     userId=userId?userId:"hello";
-    axios.get(`http://prodez-ai.onrender.com/todos/${userId}`)
+    axios.get(`https://prodez-ai.onrender.com/todos/${userId}`)
       .then(response => {
         setTodos(response.data);
       })
@@ -34,7 +34,7 @@ const ProcessedTodoList = () => {
       return;
     }
 
-    axios.post('http://prodez-ai.onrender.com/ai/process-todos', { todos: todos.map(todo => todo.text), mood })
+    axios.post('https://prodez-ai.onrender.com/ai/process-todos', { todos: todos.map(todo => todo.text), mood })
       .then(response => {
         console.log("Response from backend:", response.data); // Debug log
         if (response.data.processedTodos) {
@@ -51,7 +51,7 @@ const ProcessedTodoList = () => {
   };
 
   const generateTodos = () => {
-    axios.post('http://prodez-ai.onrender.com/ai/generate-todos', { act })
+    axios.post('https://prodez-ai.onrender.com/ai/generate-todos', { act })
       .then(response => {
         console.log("Response from backend:", response.data); // Debug log
         if (response.data.processedTodos) {
