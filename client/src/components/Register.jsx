@@ -40,7 +40,7 @@ const Register = () => {
             return;
         }
         setLoading(true);
-        const response = await fetch(`http://prodez-ai.onrender.com/user/register`, {
+        const response = await fetch(`https://prodez-ai.onrender.com/user/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
