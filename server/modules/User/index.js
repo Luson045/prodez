@@ -117,7 +117,7 @@ router.post('/register', async (req, res) => {
         <p>Dear User,</p>
         <p>Thank you for registering with <strong>ProdEZ</strong>, your comprehensive platform to enhance your productivity. We provide real-time data, AI generated schedules, and a dynamic UI to add and complete TO-DO's to minimize your work and save your time.</p>
         <p>Please verify your email address to complete your registration. Click the button below to verify your email:</p>
-        <a href="http://localhost:5000/user/verify-email?token=${verificationToken}" class="button">Verify Email</a>
+        <a href="http://prodez-ai.onrender.com/user/verify-email?token=${verificationToken}" class="button">Verify Email</a>
         <p>If you did not create an account, please disregard this email.</p>
         <p>Best regards,<br>The ProdEZ Team</p>
     </div>
@@ -162,7 +162,7 @@ router.get('/verify-email', async (req, res) => {
         const payload = { user: { id: user.id } };
         jwt.sign(payload, jwtSecret, { expiresIn: 3600 * 3 }, (err, token) => {
             if (err) throw err;
-            res.redirect(`https://localhost:3000/`);
+            res.redirect(`https://prodez-ai.netlify.app/`);
         });
     } catch (error) {
         console.error(error.message);

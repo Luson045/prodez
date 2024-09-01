@@ -12,7 +12,7 @@ const LineChart = ({ userId, todoId }) => {
   useEffect(() => {
     const fetchScoreHist = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/todos/score/${userId}`);
+        const response = await axios.get(`http://prodez-ai.onrender.com/todos/score/${userId}`);
         setScoreHist(response.data);
       } catch (error) {
         console.error('Error fetching score history:', error);

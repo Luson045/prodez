@@ -14,7 +14,7 @@ const TodoList = () => {
   // Fetch all todos for the current user
   useEffect(() => {
     if (userId) {
-      axios.get(`http://localhost:5000/todos/${userId}`)
+      axios.get(`http://prodez-ai.onrender.com/todos/${userId}`)
         .then(response => {
           setTodos(response.data);
         })
@@ -27,7 +27,7 @@ const TodoList = () => {
   // Handle adding a new todo
   const addTodo = () => {
     if (newTodo.trim() === '') return;
-    axios.post(`http://localhost:5000/todos/${userId}`, { text: newTodo })
+    axios.post(`http://prodez-ai.onrender.com/todos/${userId}`, { text: newTodo })
       .then(response => {
         setTodos(response.data);
         setNewTodo('');
@@ -39,7 +39,7 @@ const TodoList = () => {
 
   // Handle deleting a todo
   const deleteTodo = (todoId) => {
-    axios.delete(`http://localhost:5000/todos/${userId}/${todoId}`)
+    axios.delete(`http://prodez-ai.onrender.com/todos/${userId}/${todoId}`)
       .then(response => {
         setTodos(response.data);
       })
