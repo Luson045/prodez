@@ -12,7 +12,7 @@ function BottomNavbar() {
     const fetchProfile = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://prodez-ai.onrender.com/user/profile`, {
+            const response = await fetch(`https://prodez-ai.onrender.com/user/profile`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
