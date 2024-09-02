@@ -26,7 +26,10 @@ mongoose.connect(`mongodb+srv://lusonbasumatary17:${process.env.DB_PASS}@todo.q8
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-
+//ping
+app.get('/ping', async(req,res)=>{
+return res.status(404).json({message: 'Active'});
+})
 // Get all todos for a specific user
 app.get('/todos/:userId', async (req, res) => {
   const { userId } = req.params;
